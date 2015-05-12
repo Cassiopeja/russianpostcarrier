@@ -9,6 +9,7 @@ class AdminRussianPostController extends ModuleAdminController {
         $this->identifier = 'id';
 
         //$this->context = Context::getContext();
+        $this->bootstrap	=	true;
         parent::__construct();
 
         $this->addRowAction('edit');
@@ -68,7 +69,9 @@ class AdminRussianPostController extends ModuleAdminController {
                         'suffix' => '%'
                     ),
                 ),
-                'submit' => array(),
+                'submit' => array(
+                    'title'	=>	$this->l('Save'),
+                ),
             ),
             'zones_base_price' => array(
                 'title' => $this->l('Base price for 0.5 kg parcel'),
@@ -110,7 +113,9 @@ class AdminRussianPostController extends ModuleAdminController {
                         'validation' => 'isPrice'
                     ),
                 ),
-                'submit' => array(),
+                'submit' => array(
+                    'title'	=>	$this->l('Save'),
+                ),
             ),
             'zones_additional_weight_cost' => array(
                 'title' => $this->l('Cost of each additional 0.5 kg of parcel'),
@@ -151,7 +156,9 @@ class AdminRussianPostController extends ModuleAdminController {
                         'validation' => 'isPrice'
                     ),
                 ),
-                'submit' => array(),
+                'submit' => array(
+                    'title'	=>	$this->l('Save'),
+                ),
             ),
             'money_transfer_constant' => array(
                 'title' => $this->l('Fee for money transfer. Constant.'),
@@ -185,7 +192,9 @@ class AdminRussianPostController extends ModuleAdminController {
                         'validation' => 'isPrice'
                     ),
                 ),
-                'submit' => array(),
+                'submit' => array(
+                    'title'	=>	$this->l('Save'),
+                ),
             ),
             'money_transfer_percent' => array(
                 'title' => $this->l('Fee for money transfer. Percent.'),
@@ -223,7 +232,9 @@ class AdminRussianPostController extends ModuleAdminController {
                         'suffix' => '%'
                     ),
                 ),
-                'submit' => array(),
+                'submit' => array(
+                    'title'	=>	$this->l('Save'),
+                ),
             )
         );
     }
