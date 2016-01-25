@@ -29,3 +29,10 @@
 4. Затем надо заархивировать эту папку russianpostcarrier.
 5. Получится архив russianpostcarrier.zip, в котором находится каталог russianpostcarrier.
 6. Полученный архив модуля можно загрузить в Prestashop.
+
+------------------------------------------------
+Для тех кто хочет установить модуль на Prestashop 1.6
+
+В файле russianpostcarrier/models/RussianPost.php
+
+Ищем RussianPost::$db-> и меняем на Db::getInstance()->
